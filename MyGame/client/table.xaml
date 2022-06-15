@@ -1,0 +1,143 @@
+﻿<Window x:Class="client.table"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="table" Height="659.774" Width="1000">
+    <Grid x:Name="txtPlayerDetailes" HorizontalAlignment="Right" Width="992" >
+        <Grid.BindingGroup>
+            <BindingGroup ValidatesOnNotifyDataError="False"/>
+        </Grid.BindingGroup>
+        <Label x:Name="lblTableName" Content="Table Name" Margin="438,10,437,0" VerticalAlignment="Top" FontSize="18" Height="35"/>
+        <Button x:Name="btnExit" Content="exit" HorizontalAlignment="Left" Margin="41,78,0,0" VerticalAlignment="Top" Width="58"/>
+        <Image Height="400" Margin="210,123,50,0" VerticalAlignment="Top" Source="imgs/TableBackGround.png"/>
+        <Image x:Name="imgPlayer1" HorizontalAlignment="Left" Height="65" Margin="316,141,0,0" VerticalAlignment="Top" Width="53" Source="imgs/players/emptyPlayer.jpg"/>
+        <Button x:Name="btnPlayer1" Content="sit" HorizontalAlignment="Left" Margin="316,116,0,0" VerticalAlignment="Top" Width="48" Click="btnPlayer1_Click"/>
+        <Button x:Name="btnPlayer2" Content="sit" HorizontalAlignment="Left" Margin="546,95,0,0" VerticalAlignment="Top" Width="55" Click="btnPlayer2_Click" />
+        <Button x:Name="btnPlayer3" Content="sit" HorizontalAlignment="Left" Margin="777,120,0,0" VerticalAlignment="Top" Width="53" Click="btnPlayer3_Click"/>
+        <Image x:Name="imgPlayer2" HorizontalAlignment="Left" Height="65" Margin="548,120,0,0" VerticalAlignment="Top" Width="53" Source="imgs/players/emptyPlayer.jpg"/>
+        <Image x:Name="imgPlayer3" HorizontalAlignment="Left" Height="65" Margin="777,144,0,0" VerticalAlignment="Top" Width="53" Source="imgs/players/emptyPlayer.jpg"/>
+        <Label Content="name" HorizontalAlignment="Left" Margin="12,6,0,0" VerticalAlignment="Top" Width="58" FontSize="16"/>
+        <Label Content="money" HorizontalAlignment="Left" Margin="12,42,0,0" VerticalAlignment="Top" Width="58" FontSize="16"/>
+        <Image x:Name="card11" HorizontalAlignment="Left" Height="40" Margin="340,235,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png" RenderTransformOrigin="0.237,0.008">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-45.986"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="card12" HorizontalAlignment="Left" Height="40" Margin="380,197,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-43.739"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="card21" HorizontalAlignment="Left" Height="40" Margin="543,190,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png"/>
+        <Image x:Name="card22" HorizontalAlignment="Left" Height="40" Margin="578,190,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png"/>
+        <Image x:Name="card31" HorizontalAlignment="Left" Height="40" Margin="736,200,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="39.806"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="card32" HorizontalAlignment="Left" Height="40" Margin="767,222,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="39.548"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="DealerChip" HorizontalAlignment="Left" Height="34" Margin="383,120,0,0" VerticalAlignment="Top" Width="42" Source="imgs/dealerChip.gif"/>
+        <TextBox x:Name="txtChatLog" HorizontalAlignment="Left" Height="323" Margin="10,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" IsReadOnly="True"/>
+        <Label Content="chat" HorizontalAlignment="Left" Margin="88,131,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="btnCall" Content="call" HorizontalAlignment="Left" Margin="542,536,0,0" VerticalAlignment="Top" Width="75" Click="btnCall_Click"/>
+        <Button x:Name="btnRaise" Content="raise" HorizontalAlignment="Left" Margin="498,564,0,0" VerticalAlignment="Top" Width="75" Click="btnRaise_Click"/>
+        <Button x:Name="btnFold" Content="fold" HorizontalAlignment="Left" Margin="542,589,0,0" VerticalAlignment="Top" Width="75" Click="btnFold_Click"/>
+        <TextBox x:Name="txtMoneyToBet" HorizontalAlignment="Left" Height="23" Margin="578,561,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="49"/>
+        <Image x:Name="Flop1" HorizontalAlignment="Left" Height="100" Margin="440,263,0,0" VerticalAlignment="Top" Width="55" Source="imgs/cards/cardFliepd.png"/>
+        <Image x:Name="Flop2" HorizontalAlignment="Left" Height="100" Margin="500,263,0,0" VerticalAlignment="Top" Width="55" Source="imgs/cards/cardFliepd.png"/>
+        <Image x:Name="Flop3" HorizontalAlignment="Left" Height="100" Margin="560,263,0,0" VerticalAlignment="Top" Width="55" Source="imgs/cards/cardFliepd.png"/>
+        <Image x:Name="Tern" HorizontalAlignment="Left" Height="100" Margin="620,263,0,0" VerticalAlignment="Top" Width="55" Source="imgs/cards/cardFliepd.png"/>
+        <Image x:Name="River" HorizontalAlignment="Left" Height="100" Margin="680,263,0,0" VerticalAlignment="Top" Width="55" Source="imgs/cards/cardFliepd.png"/>
+        <TextBox x:Name="txtChatMassage" HorizontalAlignment="Left" Height="54" Margin="12,514,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
+        <Button x:Name="btnSendMassage" Content="send" HorizontalAlignment="Left" Margin="12,573,0,0" VerticalAlignment="Top" Width="75" Click="btnSendMassage_Click"/>
+        <Label x:Name="lblCurrentBet" Content="0" HorizontalAlignment="Left" Margin="452,349,0,0" VerticalAlignment="Top"/>
+        <Label Content="BET" HorizontalAlignment="Left" Margin="495,349,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBank" Content="0" HorizontalAlignment="Left" Margin="631,349,0,0" VerticalAlignment="Top">
+            <Label.BindingGroup>
+                <BindingGroup/>
+            </Label.BindingGroup>
+        </Label>
+        <Label Content="BANK" HorizontalAlignment="Left" Margin="674,349,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnPlayer6" Content="sit" HorizontalAlignment="Left" Margin="290,446,0,0" VerticalAlignment="Top" Width="53" Click="btnPlayer6_Click"/>
+        <Button x:Name="btnPlayer5" Content="sit" HorizontalAlignment="Left" Margin="548,488,0,0" VerticalAlignment="Top" Width="53" Click="btnPlayer5_Click"/>
+        <Button x:Name="btnPlayer4" Content="sit" HorizontalAlignment="Left" Margin="809,446,0,0" VerticalAlignment="Top" Width="53" Click="btnPlayer4_Click"/>
+        <Image x:Name="imgPlayer6" HorizontalAlignment="Left" Height="60" Margin="290,381,0,0" VerticalAlignment="Top" Width="53" Source="imgs/players/emptyPlayer.jpg"/>
+        <Image x:Name="imgPlayer5" HorizontalAlignment="Left" Height="65" Margin="548,423,0,0" VerticalAlignment="Top" Width="53" Source="imgs/players/emptyPlayer.jpg"/>
+        <Image x:Name="imgPlayer4" HorizontalAlignment="Left" Height="60" Margin="809,381,0,0" VerticalAlignment="Top" Width="53" Source="imgs/players/emptyPlayer.jpg"/>
+        <Label x:Name="lblUserName" Content="Label" HorizontalAlignment="Left" Margin="75,6,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="lblMoney" Content="Label" HorizontalAlignment="Left" Margin="75,42,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Image x:Name="card41" HorizontalAlignment="Left" Height="40" Margin="783,333,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-43.031"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="card42" HorizontalAlignment="Left" Height="40" Margin="756,358,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-44.007"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="card52" HorizontalAlignment="Left" Height="40" Margin="543,378,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png"/>
+        <Image x:Name="card51" HorizontalAlignment="Left" Height="40" Margin="578,378,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png"/>
+        <Image x:Name="card61" HorizontalAlignment="Left" Height="40" Margin="370,355,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="44.646"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="card62" HorizontalAlignment="Left" Height="40" Margin="343,327,0,0" VerticalAlignment="Top" Width="30" Source="imgs/cards/cardFliepd.png" RenderTransformOrigin="1.028,0.105">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="48.122"/>
+                    <TranslateTransform X="6.493" Y="17.045"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="lblBet1" Content="0" HorizontalAlignment="Left" Margin="425,190,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBet2" Content="0" HorizontalAlignment="Left" Margin="627,190,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBet3" Content="0" HorizontalAlignment="Left" Margin="787,251,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBet4" Content="0" HorizontalAlignment="Left" Margin="728,386,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBet5" Content="0" HorizontalAlignment="Left" Margin="612,386,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBet6" Content="0" HorizontalAlignment="Left" Margin="402,381,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPlayerTurn" Content="turn" HorizontalAlignment="Left" Margin="677,557,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

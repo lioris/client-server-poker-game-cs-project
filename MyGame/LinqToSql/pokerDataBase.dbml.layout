@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="pokerDataBase">
+  <DataContextMoniker Name="/pokerDataBaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="46752b23-099b-424f-a8d3-7004cc7488ec" absoluteBounds="1.125, 1.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/pokerDataBaseDataContext/Table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d411c4ee-5018-48a6-a927-03d17b5d7479" absoluteBounds="1.1400000000000001, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d464672c-e19e-45eb-abe3-adf2fe0e78af" absoluteBounds="3.625, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/pokerDataBaseDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82c50a18-a848-4e48-8808-6c87b945d923" absoluteBounds="3.6400000000000006, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
